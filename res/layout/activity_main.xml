@@ -8,34 +8,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/runButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/resultView"
-        android:layout_below="@+id/resultView"
-        android:layout_marginTop="205dp"
-        android:text="Button" />
-
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/resultView"
-        android:layout_marginLeft="107dp"
-        android:layout_marginTop="37dp"
         android:ems="10"
         android:text="text" />
-
+    
     <TextView
         android:id="@+id/resultView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/inputEditText"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="168dp"
+        android:layout_below="@+id/inputEditText"
         android:text="@string/hello_world" />
+    
+    <Button
+        android:id="@+id/runButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultView"
+        android:text="run" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/runButton"
+        android:text="clear" />
 
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -14,17 +15,27 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button = (Button) findViewById(R.id.runButton);
+        Button runButton = (Button) findViewById(R.id.runButton);
+        Button clearButton = (Button) findViewById(R.id.clearButton);
         
-        /*
-        OnClickListener ocl = new OnClickListener() {
+        runButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {
+				TextView resultView = (TextView) findViewById(R.id.resultView);
+				String inputText = ((TextView)findViewById(R.id.inputEditText)).getText().toString();
+				resultView.setText(resultView.getText()+inputText);
 			}
-		};
-        button.setOnClickListener(ocl);
-        */
+		});
+        
+        clearButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				TextView resultView = (TextView) findViewById(R.id.resultView);
+				resultView.setText("");
+			}
+		});
     }
 
 
